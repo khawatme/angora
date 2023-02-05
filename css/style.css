@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap');
+
+:root {
+    --main-color: #f25454;
+    --main-color-rgba: rgba(242, 84, 84, 1);
+    --secondary-color: #f6a7a7;
+    --p-color: #6b6b6b;
+    --p2-color: #f2f2f2;
+    --background-dark: #fafafa;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+p {
+    color: var(--p-color)
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 8rem 0;
+}
+
+.main-color {
+    color: var(--main-color);
+}
+
+.p-color {
+    color: var(--p-color);
+}
+
+.background-main-color {
+    background-color: var(--main-color);
+}
+
+.secondary-color {
+    color: var(--secondary-color);
+}
+
+.background-dark {
+    background-color: var(--background-dark);
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+/* button */
+.cn-btn {
+    background-color: var(--main-color);
+    padding: 15px 25px;
+    border-radius: 5px;
+    transition: background-color .3s;
+}
+
+.cn-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* caption */
+.caption h2 {
+    z-index: 1;
+    font-size: 2.5rem;
+}
+
+.caption h2::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    height: 1px;
+    width: 40px;
+    background-color: #000;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.caption h2::before {
+    content: 'A';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5.5rem;
+    color: var(--p2-color);
+    z-index: -1;
+}
+
+.team-caption h2::before {
+    content: 'O';
+}
+
+.services-caption h2::before {
+    content: 'S';
+}
+
+.blog-caption h2::before {
+    content: 'C';
+}
+
+.contact-caption h2::before {
+    content: 'G';
+}
+
+/* navbar */
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color: var(--main-color);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--main-color);
+}
+
+
+/* home */
+
+.home-caption h2 {
+    font-size: calc(1rem + 3vw);
+}
+
+.home-caption .carousel-caption {
+    top: 38%;
+}
+
+.progress, .progress-bar {
+    height: 5px;
+}
+
+/* team */
+#team .team-card img {
+    transition: transform 0.3s;
+}
+
+#team .team-text h5 {
+    transition: color 0.3s;
+}
+
+#team .team-card:hover img {
+    transform: scale(1.1);
+    opacity: 0.2;
+}
+
+#team .team-card:hover .team-text h5 {
+    color: var(--main-color);
+}
+
+#team .team-card:hover .hidden-icons {
+    animation-name: hidden-icons;
+    animation-duration: .3s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+#team .hidden-icons {
+    position: absolute;
+    bottom: 45%;
+    transform: translateY(50%);
+    opacity: 0;
+}
+
+.layer {
+    background-color: var(--main-color);
+}
+
+/* services */
+.service h5 {
+    transition: color 0.3s;
+}
+
+.service:hover h5 {
+    color: var(--main-color);
+}
+
+/* contact */
+#contact .contact-info:not(:last-child) {
+    border-bottom: 1px solid #eeeeee;
+}
+
+#contact .contact-info h5 {
+    transition: color 0.3s;
+}
+
+#contact .contact-info:hover h5 {
+    color: var(--main-color);
+}
+
+.form-control:focus {
+    border: 2px solid var(--main-color);
+    box-shadow: none;
+}
+
+#contact a {
+    transition: color 0.3s;
+}
+
+#contact a:hover {
+    color: var(--main-color);
+}
+
+/* Slider */
+.slider-img {
+    text-align: center;
+    height: auto;
+    width: auto;
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+    
+    .slider-img img {
+    width: calc(1rem + 7vw);
+    border-radius: 50%;
+    opacity: 0.7;
+    cursor: pointer;
+    }
+    
+    .slider-img h5, .slider-img p {
+    opacity: 0;
+    }
+    
+    .slick-current img {
+    width: calc(1rem + 9vw);
+    opacity: 1;
+    }
+    
+    .slick-current h5 {
+    color: var(--main-color);
+    opacity: 1;
+    }
+    
+    .slick-current p {
+    opacity: 1;
+    }
+    
+    .slick-track {
+    display: flex;
+    align-items: center;
+    }
+
+/* footer-widgets */
+#footer-widgets {
+    background-image: url(../img/dotted-map.png);
+    background-color: #222;
+    background-position: center center;
+    background-size: contain;
+    position: relative;
+}
+
+#footer-widgets a {
+    display: block;
+    color: var(--p-color);
+    transition: color 0.3s;
+}
+
+#footer-widgets .tags a {
+    display: inline-block;
+    border: 1px solid var(--p-color);
+    padding: 2px 5px;
+    margin: 3px 1px;
+    color: var(--p-color);
+    transition: color 0.3s;
+}
+
+#footer-widgets a:hover {
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+/* footer */
+footer {
+    background-color: #1a1a1a;
+    padding: 30px 0;
+}
+
+footer .footer-icons path {
+    transition: color 0.3s;
+}
+
+footer .footer-icons a:hover path {
+    color: var(--main-color)
+}
+
+footer .footer-text-test a {
+    transition: color 0.3s;
+}
+
+footer .footer-text-test a:hover {
+    color: var(--main-color);
+}
+
+/* Animation */
+@keyframes hidden-icons {
+    from {bottom: 45%; opacity: 0;}
+    to {bottom: 50%; opacity: 1;}
+}
+
